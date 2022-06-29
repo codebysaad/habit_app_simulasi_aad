@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="32dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pager_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/pager_tv_start_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="@string/title_hint" />
+
+        <TextView
+            android:id="@+id/pager_tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/pager_priority_level"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="22:22" />
+
+        <ImageView
+            android:id="@+id/pager_priority_level"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/priority_level"
+            android:src="@drawable/ic_priority_high"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pager_tv_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pager_priority_level"
+            app:layout_constraintEnd_toEndOf="@+id/pager_priority_level"
+            app:layout_constraintStart_toStartOf="@+id/pager_priority_level"
+            app:layout_constraintTop_toTopOf="@+id/pager_priority_level"
+            app:layout_constraintVertical_bias="0.36"
+            tools:text="20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minutes"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pager_tv_minutes"
+            app:layout_constraintStart_toStartOf="@+id/pager_tv_minutes"
+            app:layout_constraintTop_toBottomOf="@+id/pager_tv_minutes" />
+
+        <Button
+            android:id="@+id/btn_open_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/open_count_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pager_priority_level" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
